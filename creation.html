@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset= "UTF-8">
+    <meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- <h3><a href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/personal_portfolio/portfolio.html">Home</a></h3> -->
+    <header class = "about-me">
+        <center><h1 class="bg-dark text-white">Task Management</h1></center>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <script src="js/bootstrap.js"></script>
+       <!--Include your background, education, career goals, and personal interests.-->
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/task_dashboard.html">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/details.html">Details</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/creation.html">Creation</a>
+                <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/edit.html">Task Edit</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="file:///C:/Users/kcrea/OneDrive/Desktop/CodingTemple/task_management/authenticate.html">Authentication</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <div class="container mt-3 pt-2">
+        <section class="my-5">
+
+            <h2 class="mb-4 custom-heading">Add Task</h2>
+            <form class="needs-validation" novalidate>
+                <!-- task name -->
+                <div class="mb-3">
+                    <label for="task-name" class="form-label">Task Title</label>
+                    <input type="text" class="form-control" id="task-name" placeholder="Enter task title" required>
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div class="invalid-feedback">Please enter task title</div>
+                </div>
+
+                <!--status of task-->
+                <div class="mb-3">
+                    <label for="task-stat" class="form-label">Task Status</label>
+                    <select class="form-control" id="task-stat" aria-label="Enter task title" required>
+                        <option selected disabled>Select Status</option>
+                        <option value="complete">Complete</option>
+                        <option value="incomplete">Incomplete</option>
+                    </select>
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div class="invalid-feedback">Please select status</div>
+                </div>
+
+                
+                <div class="mb-3">
+                    <label for="new-descrip" class="form-label">Task Description</label>
+                    <textarea class="form-control" id="new-descrip" rows="3" placeholder="Enter new description"></textarea>
+                </div>
+
+                <!--status of task-->
+                <div class="mb-3">
+                    <label for="edit-check" class="form-label">Are you sure you want to add this task?</label>
+                    <select class="form-control" id="edit-check" required>
+                        <option selected disabled>Select Status</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div class="invalid-feedback">Please select status</div>
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Task</button>
+
+            </form>
+
+        </section>
+        <script>
+            (() => {
+                'use strict'
+              
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                const forms = document.querySelectorAll('.needs-validation')
+              
+                // Loop over them and prevent submission
+                Array.from(forms).forEach(form => {
+                  form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                      event.preventDefault()
+                      event.stopPropagation()
+                    }
+              
+                    form.classList.add('was-validated')
+                  }, false)
+                })
+              })()
+        </script>
+    </div>
+        
+
+</body>
+
+
+
+
+</html>
